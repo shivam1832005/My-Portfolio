@@ -5,40 +5,36 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
-.insta{
-    width:30px;
+
+.insta {
+    width: 30px;
 }
-.linkedin{
-    width:50px
+
+.linkedin {
+    width: 50px;
 }
-.social-links{
+
+.social-links {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
 }
-.my{
+
+.my {
     border-radius: 1300px;
-}
-b* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
 }
 
 body {
     line-height: 1.6;
-    background-color: #000; 
-    color: #d4af37; 
+    background-color: #000;
+    color: #d4af37;
     overflow-x: hidden;
 }
 
-
 header {
-    background-color: #111; 
-    color: #d4af37; 
+    background-color: #111;
+    color: #d4af37;
     padding: 1rem;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -60,9 +56,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #fff; 
+    color: #fff;
 }
-
 
 section {
     padding: 4rem 2rem;
@@ -71,12 +66,12 @@ section {
     margin: 2rem auto;
     border-radius: 10px;
     max-width: 1200px;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); 
-    color: #d4af37; 
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    color: #d4af37;
 }
 
 h1, h2 {
-    color: #ffd700; 
+    color: #ffd700;
     margin-bottom: 1rem;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
@@ -85,18 +80,18 @@ h1, h2 {
 p {
     font-size: 1rem;
     margin-bottom: 1.5rem;
-    color: #b8860b; 
+    color: #b8860b;
 }
-
 
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    padding: 1rem; /* Added padding for better spacing */
 }
 
 .project-item {
-    background-color: #222; 
+    background-color: #222;
     padding: 2rem;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -105,16 +100,16 @@ p {
 
 .project-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4); 
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
 }
 
 .project-item h3 {
     margin-bottom: 0.5rem;
-    color: #ffcc00; 
+    color: #ffcc00;
 }
 
 .project-item p {
-    color: #b8860b; 
+    color: #b8860b;
 }
 
 #contact-form {
@@ -132,20 +127,20 @@ p {
     border-radius: 5px;
     font-size: 1rem;
     outline: none;
-    background-color: #111; 
-    color: #d4af37; 
+    background-color: #111;
+    color: #d4af37;
     transition: border-color 0.3s;
 }
 
 #contact-form input:focus,
 #contact-form textarea:focus {
-    border-color: #ffd700; 
+    border-color: #ffd700;
 }
 
 #contact-form button {
     padding: 1rem;
-    background-color: #ffd700; 
-    color: #000; 
+    background-color: #ffd700;
+    color: #000;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -154,13 +149,14 @@ p {
 }
 
 #contact-form button:hover {
-    background-color: #ffcc00; 
+    background-color: #ffcc00;
     transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 footer {
     background-color: #111;
-    color: #b8860b; 
+    color: #b8860b;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
@@ -171,11 +167,10 @@ footer p {
     margin: 0;
 }
 
-
 h1 {
     overflow: hidden;
     white-space: nowrap;
-    border-right: 3px solid #ffd700; 
+    border-right: 3px solid #ffd700;
     animation: typing 3s steps(40, end), blink-caret 0.7s step-end infinite;
 }
 
@@ -183,7 +178,7 @@ h1 {
     position: absolute;
     width: 15px;
     height: 15px;
-    background-color: #ffd700; 
+    background-color: #ffd700;
     border-radius: 50%;
     transform: scale(0);
     animation: ripple-animation 0.6s ease-out forwards;
@@ -197,7 +192,6 @@ h1 {
         opacity: 0;
     }
 }
-
 
 @keyframes typing {
     from {
@@ -217,10 +211,115 @@ h1 {
     }
 }
 
-
-@media (max-width: 768px) {
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
     nav ul {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+
+    #contact-form {
+        max-width: 100%;
+    }
+
+    #contact-form input, #contact-form textarea {
+        font-size: 0.9rem;
+    }
+
+    header {
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Stack projects on smaller screens */
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .project-item {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    header {
+        padding: 1rem 0;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    h1, h2 {
+        font-size: 1.8rem;
+    }
+
+    .project-item {
+        padding: 1.2rem;
+    }
+
+    #contact-form {
+        padding: 1rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.my {
+    border-radius: 1300px;  /* Original large border-radius */
+    transition: all 0.3s ease;  /* Smooth transition */
+}
+
+@media (max-width: 1024px) {
+    .my {
+        border-radius: 900px;  /* Reduce border-radius for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .my {
+        border-radius: 600px;  /* Further reduce border-radius for smaller screens */
+        width: 70%;  /* Adjust width to take 70% of the container */
+        height: auto;  /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    .my {
+        border-radius: 400px;  /* Further reduce border-radius for very small screens */
+        width: 80%;  /* Adjust width to take 80% of the container */
+        height: auto;  /* Maintain aspect ratio */
     }
 }
