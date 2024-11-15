@@ -88,3 +88,30 @@ window.addEventListener('scroll', function() {
         }
     });
 });
+
+
+document.getElementById('emailButton').addEventListener('click', function() {
+    var emailAddress = 'smittal1832005@gmail.com';
+    
+    // Try opening Gmail app on mobile devices
+    var gmailAppScheme = 'googmail://co?to=' + emailAddress; // Gmail app URL scheme
+    var webComposeUrl = 'https://mail.google.com/mail/u/0/?view=cm&fs=1&to=' + emailAddress; // Fallback to web version
+    
+    // Check if the user is on mobile and try to open the Gmail app scheme
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+    // Simple check to see if on iOS or Android
+    if (/android/i.test(userAgent)) {
+        window.location = gmailAppScheme; // Attempt to open Gmail app on Android
+        setTimeout(function() {
+            window.location = webComposeUrl; // Fallback to web if Gmail app is not installed
+        }, 2000);
+    } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
+        window.location = gmailAppScheme; // Attempt to open Gmail app on iOS
+        setTimeout(function() {
+            window.location = webComposeUrl; // Fallback to web if Gmail app is not installed
+        }, 2000);
+    } else {
+        window.location = webComposeUrl; // Default to web if not on mobile
+    }
+});
