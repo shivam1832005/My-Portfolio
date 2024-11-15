@@ -19,6 +19,7 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+    margin-bottom: 40px;
 }
 
 .my {
@@ -185,6 +186,56 @@ h1 {
     pointer-events: none;
     opacity: 0.6;
 }
+#contact {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1a1a1a, #333); /* Gradient background */
+    color: #d4af37;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); /* Golden glow effect */
+    max-width: 800px;
+    margin: 2rem auto; /* Center the section */
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #ffd700;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Glowing text effect */
+}
+
+#contact p {
+    font-size: 1rem;
+    color: #b8860b;
+    margin-bottom: 2rem;
+}
+
+.email-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #ffd700;
+    color: #000;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.email-button:hover {
+    background-color: #ffcc00;
+    transform: translateY(-3px); /* Hover lift effect */
+}
+
+@media (max-width: 768px) {
+    #contact {
+        padding: 3rem 1.5rem;
+    }
+
+    #contact h2 {
+        font-size: 1.8rem;
+    }
+}
 
 @keyframes ripple-animation {
     to {
@@ -262,6 +313,70 @@ h1 {
         padding: 1.5rem;
     }
 }
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Black background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above all other elements */
+}
+
+.loader-ring {
+    width: 80px;
+    height: 80px;
+    border: 8px solid #444; /* Dark border */
+    border-top: 8px solid #ffd700; /* Golden top border */
+    border-radius: 50%;
+    animation: ring-spin 1.5s linear infinite;
+}
+
+.loading-text {
+    color: #d4af37; /* Golden text color */
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    animation: text-glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Keyframes for the spinning effect */
+@keyframes ring-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Keyframes for glowing text */
+@keyframes text-glow {
+    from {
+        text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 20px #ffd700;
+    }
+    to {
+        text-shadow: 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+
+nav ul li a {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
 
 @media (max-width: 480px) {
     body {
@@ -298,8 +413,42 @@ h1 {
     }
 }
 .my {
-    border-radius: 1300px;  /* Original large border-radius */
-    transition: all 0.3s ease;  /* Smooth transition */
+    border-radius: 50%; /* Make the image perfectly round */
+    width: 500px; /* Initial width for larger screens */
+     /* Initial height for larger screens */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5); /* Golden glow shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
+    margin: 2rem auto; /* Center the image with margin */
+    display: block; /* Make sure the image is centered */
+}
+
+.my:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.7); /* Intensified shadow on hover */
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .my {
+        width: 150px; /* Reduce size for medium screens */
+        height: 150px; /* Maintain aspect ratio */
+        border-radius: 50%; /* Keep it round */
+    }
+}
+
+@media (max-width: 768px) {
+    .my {
+        width: 120px; /* Further reduce size for smaller screens */
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .my {
+        width: 100px; /* Smallest size for mobile screens */
+        height: 100px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -321,5 +470,105 @@ h1 {
         border-radius: 400px;  /* Further reduce border-radius for very small screens */
         width: 80%;  /* Adjust width to take 80% of the container */
         height: auto;  /* Maintain aspect ratio */
+    }
+}
+.skills-section {
+    text-align: center;
+    color: #d4af37;
+    margin-top: 2rem;
+}
+
+.skill {
+    margin-bottom: 1rem;
+    margin-top: 30px;
+}
+
+.skill-bar {
+    background: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 10px;
+    margin-top: 0.5rem;
+}
+
+.progress {
+    background-color: #ffd700;
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+section {
+    opacity: 0;
+    transform: translateY(50px); /* Start from below */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Trigger animation when section is in view */
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+#contact-form button:hover {
+    animation: bounce 0.6s ease;
+}
+
+/* Bounce effect keyframes */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+h1, h2 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInText 1.5s ease-out forwards;
+    animation-delay: 0.5s; /* Delay the start for better timing */
+}
+
+/* Fade-in animation for text */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.social-links a {
+    color: #d4af37;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffd700;
+    transform: scale(1.1); /* Slightly enlarge the icon */
+}
+.email-button {
+    animation: pulse 1.5s infinite alternate;
+}
+
+/* Pulsing effect for the email button */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+    100% {
+        transform: scale(1.1);
+        box-shadow: 0 0 25px rgba(255, 215, 0, 1);
     }
 }
