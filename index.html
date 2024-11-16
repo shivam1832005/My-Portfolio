@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <div id="loader">
-        <div class="loader-ring"></div>
-        <p class="loading-text">Loading...</p>
-    </div>
+<div id="loader">
+    <div class="loader-ring"></div>
+    <p class="loading-text">Loading...</p>
+</div>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -28,15 +31,28 @@
             <h1></h1>
             <p>Hi! I'm Shivam Mittal, a 2nd Year ECE Undergrad at MNIT Jaipur.</p>
             <div class="social-links">
-                    <div class="items item1"><a href="https://www.instagram.com/_shivam_mittal__/profilecard/?igsh=MXNqNncxYnd1bmh3aQ==" target="_blank" class="social-icon">
-                        <img class="insta" src="https://freelogopng.com/images/all_img/1658586823instagram-logo-transparent.png" alt="Instagram">
+                <div class="items item1"><a
+                        href="https://www.instagram.com/_shivam_mittal__/profilecard/?igsh=MXNqNncxYnd1bmh3aQ=="
+                        target="_blank" class="social-icon">
+                        <img class="insta"
+                            src="https://freelogopng.com/images/all_img/1658586823instagram-logo-transparent.png"
+                            alt="Instagram">
                     </a></div>
-                    <div class="items item2"><a href="https://www.linkedin.com/in/shivam-kr-mittal-62bb9130a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon">
-                        <img class="linkedin" src="https://png.pngtree.com/element_our/sm/20180626/sm_5b321c9756fc6.jpg" alt="LinkedIn">
+                <div class="items item2"><a
+                        href="https://www.linkedin.com/in/shivam-kr-mittal-62bb9130a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        target="_blank" class="social-icon">
+                        <img class="linkedin" src="https://png.pngtree.com/element_our/sm/20180626/sm_5b321c9756fc6.jpg"
+                            alt="LinkedIn">
+                    </a></div>
+                    <div class="items item2"><a
+                        href="https://github.com/shivam1832005"
+                        target="_blank" class="social-icon">
+                        <img class="linkedin" src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_640.png"
+                            alt="GitHub">
                     </a></div>
             </div>
         </div>
-        
+
         <h3>My Skills</h3>
         <div class="skill">
             <span>Web Development</span>
@@ -68,14 +84,14 @@
                 <div class="progress" style="width: 70%;"></div>
             </div>
         </div>
-    </div>
+        </div>
     </section>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>I'm Shivam Mittal, an ECE student at MNIT Jaipur. I’m passionate about development, especially in creating software and applications. I love turning ideas into real, working solutions. Welcome to my portfolio!</p>
+        <p>I'm Shivam Mittal, an ECE student at MNIT Jaipur. I’m passionate about development, especially in creating
+            software and applications. I love turning ideas into real, working solutions. Welcome to my portfolio!</p>
     </section>
-
     <section id="projects">
         <h2>My Projects</h2>
         <div class="project-grid">
@@ -96,15 +112,38 @@
     <section id="contact">
         <h2>Contact Me</h2>
         <p>If you'd like to get in touch, click the button below to send me a message.</p>
-        <a href="mailto:smittal1832005@gmail.com?subject=Hello%20Shivam&body=Hi%20Shivam,%0A%0A[Your%20message%20here]%0A%0AFrom:%20[Your%20email%20here]" class="email-button">GET IN TOUCH</a>
+        <a href="mailto:smittal1832005@gmail.com?subject=Hello%20Shivam&body=Hi%20Shivam,%0A%0A[Your%20message%20here]%0A%0AFrom:%20[Your%20email%20here]"
+            class="email-button">GET IN TOUCH</a>
     </section>
-    
+
+
+    <!-- Button to Download Resume -->
+    <a href="resume.pdf" download class="glassy-btn">
+        <i class="fas fa-download"></i> Download Resume
+    </a>
+
+    <!-- Chat Icon -->
+<div id="chat-icon" onclick="toggleChatbox()">
+    💬
+  </div>
+  
+  <!-- Chatbox -->
+  <div id="chatbox" style="display: none;">
+    <div id="chat-header">Chat with Me!</div>
+    <div id="chat-messages"></div>
+    <input id="chat-input" type="text" placeholder="Type a message..." />
+    <button id="send-btn">Send</button>
+  </div>
+
 
     <footer>
         <p>&copy; 2024 [Shivam]. All rights reserved.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+    </script>
     <script src="script.js"></script>
 </body>
+
 </html>
