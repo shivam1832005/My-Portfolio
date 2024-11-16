@@ -628,8 +628,8 @@ h1, h2 {
 /* Chat Icon */
 #chat-icon {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom:10px;
+    left: 15px;
     background-color: black;
     color: white;
     font-size: 24px;
