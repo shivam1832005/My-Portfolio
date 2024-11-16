@@ -117,29 +117,3 @@ document.getElementById('emailButton').addEventListener('click', function() {
 });
 
 
-function toggleChatbox() {
-    const chatbox = document.getElementById("chatbox");
-    if (chatbox.style.display === "none" || chatbox.style.display === "") {
-      chatbox.style.display = "block";
-    } else {
-      chatbox.style.display = "none";
-    }
-  }
-
-  document.getElementById("send-btn").addEventListener("click", async () => {
-    const chatMessages = document.getElementById("chat-messages");
-    const chatInput = document.getElementById("chat-input");
-  
-    const userMessage = chatInput.value.trim();
-    if (userMessage) {
-      chatMessages.innerHTML += `<div class="user-message">${userMessage}</div>`;
-      chatInput.value = "";
-  
-      // Simulate a bot response or call your backend
-      setTimeout(() => {
-        const botMessage = "This is a simulated response.";
-        chatMessages.innerHTML += `<div class="bot-message">${botMessage}</div>`;
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-      }, 1000);
-    }
-  });
